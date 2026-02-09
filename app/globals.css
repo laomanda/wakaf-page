@@ -122,21 +122,22 @@
   body {
     @apply bg-background text-foreground;
   }
-
+  
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
-    @apply bg-neutral-200 rounded-full hover:bg-neutral-300 transition-colors;
+    @apply bg-neutral-200 hover:bg-neutral-300 rounded-full transition-colors;
   }
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-neutral-200) transparent;
+
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-800 hover:bg-neutral-700;
   }
 }
