@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Wakaf DPF | Wakaf Produktif Transparan",
   description:
     "Platform wakaf produktif untuk membangun manfaat berkelanjutan dengan laporan real time dan program terverifikasi.",
+  icons: {
+    icon: "/brand/dpf-icon.png",
+  },
 };
 
 export default function RootLayout({

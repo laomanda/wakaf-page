@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import Container from "@/components/layout/Container";
-import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/sections/SectionReveal";
 
 type HeroCenteredProps = {
@@ -39,12 +38,18 @@ export default function HeroCentered({
             agar wakaf Anda memberi dampak nyata.
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row">
-            <Button size="lg" asChild>
-              <a href={ctaHref}>{ctaLabel}</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10" asChild>
-              <a href="#program">Lihat Program</a>
-            </Button>
+            <a
+              href={ctaHref}
+              className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+            >
+              {ctaLabel}
+            </a>
+            <a
+              href="#program"
+              className="inline-flex h-11 items-center justify-center rounded-md border border-white/40 px-8 text-sm font-medium text-white transition-colors hover:bg-white/10"
+            >
+              Lihat Program
+            </a>
           </div>
         </div>
       </Container>

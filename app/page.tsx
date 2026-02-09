@@ -6,7 +6,6 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import HeroCentered from "@/components/sections/HeroCentered";
 import ProgramsGrid from "@/components/sections/ProgramsGrid";
 import Testimonials from "@/components/sections/Testimonials";
-import { Button } from "@/components/ui/button";
 
 const primaryCta = {
   label: "Mulai Wakaf",
@@ -30,9 +29,12 @@ export default function Home() {
           <span className="text-sm font-semibold text-neutral-900">
             Siap berwakaf?
           </span>
-          <Button size="sm" asChild>
-            <a href={primaryCta.href}>{primaryCta.label}</a>
-          </Button>
+          <a
+            href={primaryCta.href}
+            className="inline-flex h-9 items-center justify-center rounded-md bg-neutral-900 px-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+          >
+            {primaryCta.label}
+          </a>
         </Container>
       </div>
     </div>

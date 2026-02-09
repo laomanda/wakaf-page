@@ -5,15 +5,15 @@ import BenefitsChecklist from "@/components/program/BenefitsChecklist";
 import ProgramDescription from "@/components/program/ProgramDescription";
 import ProgramGallery from "@/components/program/ProgramGallery";
 import ProgramPriceBox from "@/components/program/ProgramPriceBox";
-import { Button } from "@/components/ui/button";
 import { programs } from "@/data/programs";
 import { notFound } from "next/navigation";
 
 type ProgramDetailPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function ProgramDetailPage({ params }: ProgramDetailPageProps) {
+export default async function ProgramDetailPage(props: ProgramDetailPageProps) {
+  const params = await props.params;
   const program = programs.find((item) => item.slug === params.slug);
 
   if (!program) {
@@ -61,9 +61,12 @@ export default function ProgramDetailPage({ params }: ProgramDetailPageProps) {
           <span className="text-sm font-semibold text-neutral-900">
             Siap mendukung program ini?
           </span>
-          <Button size="sm" asChild>
-            <a href="#">Mulai Wakaf</a>
-          </Button>
+          <a
+            href="#"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-neutral-900 px-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+          >
+            Mulai Wakaf
+          </a>
         </Container>
       </div>
     </div>

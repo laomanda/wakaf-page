@@ -2,7 +2,6 @@ import { BarChart3, ShieldCheck, Target, Users } from "lucide-react";
 
 import Container from "@/components/layout/Container";
 import SectionReveal from "@/components/sections/SectionReveal";
-import { Card, CardContent } from "@/components/ui/card";
 
 const highlights = [
   {
@@ -47,19 +46,22 @@ export default function AboutWakaf() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {highlights.map((item) => (
-              <Card key={item.title} className="border-neutral-200">
-                <CardContent className="space-y-3 p-5">
+              <div
+                key={item.title}
+                className="rounded-xl border border-neutral-200 bg-white text-neutral-950 shadow-sm"
+              >
+                <div className="p-5 flex flex-col gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100">
                     <item.icon className="h-5 w-5 text-neutral-700" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-neutral-900">
+                    <h3 className="text-sm font-semibold text-neutral-900">
                       {item.title}
-                    </p>
+                    </h3>
                     <p className="text-sm text-neutral-600">{item.desc}</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>

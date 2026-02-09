@@ -1,17 +1,10 @@
 "use client";
 
-import { Menu, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { Menu, X, ChevronRight } from "lucide-react";
 
 import Container from "@/components/layout/Container";
-import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Program", href: "/#program" },
@@ -21,12 +14,18 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="border-b border-neutral-200 bg-white">
+    <header className="border-b border-neutral-200 bg-white sticky top-0 z-50">
       <Container className="flex items-center justify-between py-4" size="7xl">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-900 text-sm font-semibold text-white">
-            WD
+        <a href="/" className="flex items-center gap-3">
+          <div className="relative h-10 w-10 overflow-hidden rounded-xl">
+            <img
+              src="/brand/dpf-icon.png"
+              alt="Wakaf DPF Logo"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -36,8 +35,9 @@ export default function Navbar() {
               Wakaf Produktif
             </p>
           </div>
-        </div>
+        </a>
 
+        {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 text-sm font-medium text-neutral-600 md:flex">
           {navItems.map((item) => (
             <a
@@ -50,45 +50,73 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* Desktop CTA */}
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" className="text-neutral-600">
+          <a
+            href="/login"
+            className="text-sm font-medium text-neutral-600 hover:text-neutral-900 px-4 py-2"
+          >
             Masuk
-          </Button>
-          <Button>Mulai Wakaf</Button>
+          </a>
+          <a
+            href="#program"
+            className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
+          >
+            Mulai Wakaf
+          </a>
         </div>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-full sm:max-w-sm">
-            <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
-              <SheetDescription>
+        {/* Mobile Menu Toggle */}
+        <button
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-neutral-200 bg-white text-neutral-900 transition-colors hover:bg-neutral-100 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </Container>
+      
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-40 mt-[73px] bg-white p-4 md:hidden border-t border-neutral-100">
+           <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-lg font-semibold text-neutral-900">Menu</h2>
+              <p className="text-sm text-neutral-500">
                 Navigasi cepat untuk melihat program dan laporan.
-              </SheetDescription>
-            </SheetHeader>
-            <div className="mt-6 flex flex-col gap-3">
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="flex items-center justify-between rounded-lg border border-neutral-200 px-4 py-3 text-sm font-medium text-neutral-700"
+                  className="flex items-center justify-between rounded-lg border border-neutral-200 px-4 py-3 text-sm font-medium text-neutral-700 active:bg-neutral-50"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                   <ChevronRight className="h-4 w-4 text-neutral-400" />
                 </a>
               ))}
             </div>
-            <div className="mt-6 flex flex-col gap-3">
-              <Button>Mulai Wakaf</Button>
-              <Button variant="outline">Hubungi Kami</Button>
+            <div className="flex flex-col gap-3">
+              <a
+                href="#program"
+                className="inline-flex w-full items-center justify-center rounded-lg bg-neutral-900 px-4 py-3 text-sm font-medium text-white hover:bg-neutral-800"
+                onClick={() => setIsOpen(false)}
+              >
+                Mulai Wakaf
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex w-full items-center justify-center rounded-lg border border-neutral-200 bg-white px-4 py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-100"
+                onClick={() => setIsOpen(false)}
+              >
+                Hubungi Kami
+              </a>
             </div>
-          </SheetContent>
-        </Sheet>
-      </Container>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

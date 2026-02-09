@@ -1,6 +1,5 @@
 import Container from "@/components/layout/Container";
 import SectionReveal from "@/components/sections/SectionReveal";
-import { Button } from "@/components/ui/button";
 
 type FinalCTAProps = {
   ctaLabel: string;
@@ -22,9 +21,12 @@ export default function FinalCTA({ ctaLabel, ctaHref }: FinalCTAProps) {
             Tim kami siap membantu memilih program yang sesuai dengan tujuan
             wakaf Anda.
           </p>
-          <Button size="lg" asChild>
-            <a href={ctaHref}>{ctaLabel}</a>
-          </Button>
+          <a
+            href={ctaHref}
+            className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+          >
+            {ctaLabel}
+          </a>
         </div>
       </Container>
     </SectionReveal>
