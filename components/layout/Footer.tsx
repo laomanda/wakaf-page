@@ -12,14 +12,14 @@ export default function Footer() {
       <Container className="py-10" size="7xl">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <p className="text-sm font-semibold text-neutral-900">Wakaf DPF</p>
+            <p className="text-sm font-semibold text-brand-green-900">Wakaf DPF</p>
             <p className="mt-3 text-sm text-neutral-600">
               Platform wakaf produktif yang fokus pada transparansi, pengelolaan
               amanah, dan dampak sosial berkelanjutan.
             </p>
           </div>
           <div>
-            <p className="text-sm font-semibold text-neutral-900">Kontak</p>
+            <p className="text-sm font-semibold text-brand-green-900">Kontak</p>
             <div className="mt-3 space-y-2 text-sm text-neutral-600">
               <p>info@wakafdpf.id</p>
               <p>+62 21 1234 5678</p>
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <p className="text-sm font-semibold text-neutral-900">Legal</p>
+            <p className="text-sm font-semibold text-brand-green-900">Legal</p>
             <div className="mt-3 flex flex-col gap-2 text-sm text-neutral-600">
               {legalLinks.map((link) => (
                 <a key={link.label} href={link.href} className="hover:text-neutral-900">

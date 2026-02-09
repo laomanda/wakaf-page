@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  display: "swap",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body
-        className={`${manrope.variable} ${fraunces.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

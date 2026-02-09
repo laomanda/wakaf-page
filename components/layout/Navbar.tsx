@@ -20,7 +20,7 @@ export default function Navbar() {
     <header className="border-b border-neutral-200 bg-white sticky top-0 z-50">
       <Container className="flex items-center justify-between py-4" size="7xl">
         <a href="/" className="flex items-center gap-3">
-          <div className="relative h-10 w-10 overflow-hidden rounded-xl">
+          <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-brand-green-600">
             <img
               src="/brand/dpf-icon.png"
               alt="Wakaf DPF Logo"
@@ -60,7 +60,7 @@ export default function Navbar() {
           </a>
           <a
             href="#program"
-            className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
+            className="inline-flex items-center justify-center rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-600"
           >
             Mulai Wakaf
           </a>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-3">
               <a
                 href="#program"
-                className="inline-flex w-full items-center justify-center rounded-lg bg-neutral-900 px-4 py-3 text-sm font-medium text-white hover:bg-neutral-800"
+                className="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-4 py-3 text-sm font-medium text-white hover:bg-primary-600"
                 onClick={() => setIsOpen(false)}
               >
                 Mulai Wakaf

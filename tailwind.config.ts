@@ -1,9 +1,77 @@
 ﻿import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // BRAND DPF
+        primary: {
+          50: "#fff7e6",
+          100: "#ffebbf",
+          200: "#ffd68a",
+          300: "#ffbf4d",
+          400: "#ffa826",
+          500: "#ff8a00", // oranye utama (CTA)
+          600: "#f97316",
+          700: "#ea580c",
+          800: "#c2410c",
+          900: "#9a3412",
+        },
+        brandGreen: {
+          50: "#f3faf3",
+          100: "#e1f4e1",
+          200: "#bde4bd",
+          300: "#8fcd8f",
+          400: "#5fab5f",
+          500: "#3f8f3f", // hijau logo
+          600: "#347334",
+          700: "#295a29",
+          800: "#1f4220",
+          900: "#152d16",
+        },
+        brandBlueTeal: {
+          500: "#2B7A9B", // Custom Blue Teal
+          100: "#EAF5F8", // light bg
+        },
+        brandWarmOrange: {
+          500: "#F39C12", // Custom Warm Orange
+          100: "#FEF5E7", // light bg
+        },
+        brandPurple: {
+          500: "#8E44AD", // Custom Purple
+          100: "#F4ECF7", // light bg
+        },
+      },
+      fontFamily: {
+        // Poppins sebagai font utama.
+        heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        body: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        accent: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
+      },
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1440px",
+        },
+      },
+      borderRadius: {
+        "xl": "0.9rem",
+        "2xl": "1.2rem",
+      },
+      boxShadow: {
+        soft: "0 18px 45px rgba(15, 23, 42, 0.06)",
+      },
+    },
   },
   plugins: [],
 };

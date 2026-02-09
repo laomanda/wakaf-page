@@ -13,7 +13,7 @@ export default function HeroCentered({
   ctaHref,
 }: HeroCenteredProps) {
   return (
-    <SectionReveal className="relative overflow-hidden bg-neutral-950 text-white">
+    <SectionReveal className="relative overflow-hidden bg-brand-green-900 text-white">
       <div className="absolute inset-0 -z-10">
         <Image
           src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
@@ -23,7 +23,7 @@ export default function HeroCentered({
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-neutral-950/70" />
+        <div className="absolute inset-0 bg-brand-green-950/70" />
       </div>
       <Container className="relative z-10 text-center" size="7xl">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
@@ -40,7 +40,7 @@ export default function HeroCentered({
           <div className="flex flex-col items-center gap-3 sm:flex-row">
             <a
               href={ctaHref}
-              className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-primary-500 px-8 text-sm font-medium text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               {ctaLabel}
             </a>

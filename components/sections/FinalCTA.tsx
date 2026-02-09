@@ -8,9 +8,9 @@ type FinalCTAProps = {
 
 export default function FinalCTA({ ctaLabel, ctaHref }: FinalCTAProps) {
   return (
-    <SectionReveal className="bg-neutral-900 text-white">
+    <SectionReveal className="bg-brand-green-900 text-white">
       <Container size="7xl">
-        <div className="flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-neutral-950/70 px-6 py-12 text-center sm:px-10">
+        <div className="flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-brand-green-950/70 px-6 py-12 text-center sm:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
             Mulai Sekarang
           </p>
@@ -23,7 +23,7 @@ export default function FinalCTA({ ctaLabel, ctaHref }: FinalCTAProps) {
           </p>
           <a
             href={ctaHref}
-            className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+            className="inline-flex h-11 items-center justify-center rounded-md bg-primary-500 px-8 text-sm font-medium text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             {ctaLabel}
           </a>

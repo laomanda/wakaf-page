@@ -63,7 +63,7 @@ export default async function ProgramDetailPage(props: ProgramDetailPageProps) {
           </span>
           <a
             href="#"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-neutral-900 px-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-primary-500 px-3 text-xs font-medium text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             Mulai Wakaf
           </a>

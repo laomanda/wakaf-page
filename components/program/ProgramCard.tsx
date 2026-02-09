@@ -33,7 +33,7 @@ export default function ProgramCard({ program }: { program: Program }) {
           <h3 className="text-lg font-semibold leading-snug text-neutral-900">
             {program.title}
           </h3>
-          <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-semibold text-neutral-900 whitespace-nowrap">
+          <span className="inline-flex items-center rounded-full bg-brand-green-50 px-2.5 py-0.5 text-xs font-semibold text-brand-green-700 whitespace-nowrap">
             {program.price}
           </span>
         </div>
@@ -46,7 +46,7 @@ export default function ProgramCard({ program }: { program: Program }) {
               key={benefit}
               className="flex items-start gap-2 text-sm text-neutral-600"
             >
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-neutral-900 shrink-0" />
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green-600 shrink-0" />
               <span>{benefit}</span>
             </div>
           ))}
@@ -54,7 +54,7 @@ export default function ProgramCard({ program }: { program: Program }) {
         <div className="pt-2 mt-auto">
           <Link
             href={`/program/${program.slug}`}
-            className="inline-flex h-10 w-full items-center justify-center rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+            className="inline-flex h-10 w-full items-center justify-center rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-primary-600 transition-colors hover:bg-brand-green-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             Lihat Detail
             <ArrowUpRight className="ml-2 h-4 w-4" />
