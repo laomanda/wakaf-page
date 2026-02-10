@@ -1,4 +1,4 @@
-import { BarChart3, ShieldCheck, Target, Users } from "lucide-react";
+import { BarChart3, ShieldCheck, Target, Users, FileText } from "lucide-react";
 
 import Container from "@/components/layout/Container";
 import SectionReveal from "@/components/sections/SectionReveal";
@@ -30,23 +30,50 @@ export default function AboutWakaf() {
   return (
     <SectionReveal id="about" className="py-24 sm:py-32 bg-white">
       <Container size="7xl">
-        <div className="flex flex-col gap-10">
-          <div className="mx-auto max-w-3xl text-center space-y-4">
-            <span className="font-heading text-primary-500 font-bold tracking-widest text-3xl md:text-4xl uppercase block">
+        <div className="flex flex-col gap-12">
+          {/* Centered Title */}
+          <div className="text-center">
+            <span className="font-heading text-black font-bold tracking-widest text-3xl md:text-4xl uppercase block">
               Tentang Kami
             </span>
-
-            <h2 className="font-heading text-3xl font-bold leading-tight text-brand-green-900 sm:text-4xl lg:text-5xl">
-              Ekosistem wakaf modern untuk <span className="text-primary-500">hasil yang berkelanjutan.</span>
-            </h2>
-            <p className="text-base text-neutral-600 leading-relaxed max-w-2xl mx-auto">
-              Kami memastikan setiap program memiliki target dampak, pelaporan
-              rutin, dan pengelolaan aset yang produktif agar manfaatnya terus
-              bertambah untuk umat.
-            </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            {/* Left Content */}
+            <div className="space-y-6 lg:max-w-xl">
+              <h2 className="font-heading text-3xl font-bold leading-tight text-brand-green-600 sm:text-4xl lg:text-5xl">
+                Ekosistem wakaf modern untuk <span className="text-primary-500">hasil yang berkelanjutan.</span>
+              </h2>
+              <p className="text-base text-neutral-600 leading-relaxed text-justify">
+                Kami memastikan setiap program memiliki target dampak, pelaporan
+                rutin, dan pengelolaan aset yang produktif agar manfaatnya terus
+                bertambah untuk umat.
+              </p>
+
+              <div className="pt-4 flex flex-col sm:flex-row gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="bg-brand-green-100 p-2 rounded-full text-brand-green-600">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-brand-green-900">Terverifikasi BWI</p>
+                    <p className="text-xs text-neutral-500">No. Reg: 3.3.00338</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary-100 p-2 rounded-full text-primary-500">
+                    <FileText className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-brand-green-900">Izin Operasional LKS</p>
+                    <p className="text-xs text-neutral-500 max-w-[200px] leading-tight">(SK No 465.3/39)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Content */}
+            <div className="grid gap-6 sm:grid-cols-2">
             {highlights.map((item) => (
               <div
                 key={item.title}
@@ -68,6 +95,7 @@ export default function AboutWakaf() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </Container>
     </SectionReveal>
