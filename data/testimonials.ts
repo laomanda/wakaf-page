@@ -34,4 +34,46 @@ export const testimonials: Testimonial[] = [
       "Senang bisa mendukung santri tahfidz sekaligus melihat perkembangan usahanya.",
     avatar: "https://i.pravatar.cc/150?img=24",
   },
+  {
+    name: "Budi Santoso",
+    role: "Wakif Sumur Bor",
+    message:
+      "Alhamdulillah, air bersih kini mengalir lancar di desa binaan. Proses wakafnya sangat mudah.",
+    avatar: "https://i.pravatar.cc/150?img=11",
+  },
+  {
+    name: "Rina Kusuma",
+    role: "Donatur Rutin",
+    message:
+      "Platform wakaf yang sangat profesional. Laporannya transparan dan bisa diakses kapan saja.",
+    avatar: "https://i.pravatar.cc/150?img=5",
+  },
+  {
+    name: "Dedi Setiawan",
+    role: "Petani Binaan",
+    message:
+      "Bantuan alat pertanian dari hasil wakaf sangat membantu meningkatkan hasil panen kami.",
+    avatar: "https://i.pravatar.cc/150?img=53",
+  },
+  {
+    name: "Linda Wijaya",
+    role: "Wakif Al-Qur'an",
+    message:
+      "Semoga setiap huruf yang dibaca menjadi amal jariyah. Distribusinya sangat luas hingga pelosok.",
+    avatar: "https://i.pravatar.cc/150?img=44",
+  },
+  {
+    name: "Fajar Rizki",
+    role: "Relawan Pendidikan",
+    message:
+      "Melihat anak-anak bisa sekolah dengan fasilitas yang layak berkat wakaf adalah kebahagiaan tersendiri.",
+    avatar: "https://i.pravatar.cc/150?img=68",
+  },
+  {
+    name: "Maya Indah",
+    role: "Wakif Produktif",
+    message:
+      "Investasi akhirat yang nyata. Pengelolaan wakaf produktifnya sangat meyakinkan dan amanah.",
+    avatar: "https://i.pravatar.cc/150?img=9",
+  },
 ];

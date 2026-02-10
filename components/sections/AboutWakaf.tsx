@@ -35,7 +35,7 @@ export default function AboutWakaf() {
             <span className="font-heading text-primary-500 font-bold tracking-widest text-3xl md:text-4xl uppercase block">
               Tentang Kami
             </span>
-            
+
             <h2 className="font-heading text-3xl font-bold leading-tight text-brand-green-900 sm:text-4xl lg:text-5xl">
               Ekosistem wakaf modern untuk <span className="text-primary-500">hasil yang berkelanjutan.</span>
             </h2>
@@ -45,7 +45,7 @@ export default function AboutWakaf() {
               bertambah untuk umat.
             </p>
           </div>
-          
+
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((item) => (
               <div

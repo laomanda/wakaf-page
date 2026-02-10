@@ -1,3 +1,4 @@
+import Link from "next/link"; // Ensure Link is imported if used, removing unused imports later if necessary
 import Container from "@/components/layout/Container";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -6,11 +7,12 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import HeroCentered from "@/components/sections/HeroCentered";
 import ProgramsGrid from "@/components/sections/ProgramsGrid";
 import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
 
 const primaryCta = {
-    label: "Mulai Wakaf",
-    href: "https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF,%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut",
-  };
+  label: "Mulai Wakaf",
+  href: "https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF,%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut",
+};
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
         <AboutWakaf />
         <ProgramsGrid />
         <Testimonials />
+        <FAQ />
         <FinalCTA ctaLabel={primaryCta.label} ctaHref={primaryCta.href} />
       </main>
       <Footer />
