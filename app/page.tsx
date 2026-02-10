@@ -8,9 +8,9 @@ import ProgramsGrid from "@/components/sections/ProgramsGrid";
 import Testimonials from "@/components/sections/Testimonials";
 
 const primaryCta = {
-  label: "Mulai Wakaf",
-  href: "#program",
-};
+    label: "Mulai Wakaf",
+    href: "https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF,%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut",
+  };
 
 export default function Home() {
   return (
