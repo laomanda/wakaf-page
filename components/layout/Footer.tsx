@@ -21,7 +21,7 @@ export default function Footer() {
                 className="w-10 h-10 object-contain bg-white rounded-[12px] p-1"
               />
               <span className="text-xl font-bold text-white tracking-tight">
-                Wakaf DPF
+                Wakaf Produktif
               </span>
             </div>
             <p className="text-white/90 text-sm leading-relaxed mb-6">
@@ -29,11 +29,11 @@ export default function Footer() {
               amanah, dan dampak sosial berkelanjutan untuk kemaslahatan umat.
             </p>
             <div className="flex gap-4">
-              <SocialLink href="#" icon={<FaWhatsapp size={20} />} label="WhatsApp" className="hover:bg-[#25D366] hover:border-[#25D366]" />
-              <SocialLink href="#" icon={<FaInstagram size={20} />} label="Instagram" className="hover:bg-[#E1306C] hover:border-[#E1306C]" />
-              <SocialLink href="#" icon={<FaTiktok size={20} />} label="TikTok" className="hover:bg-black hover:border-black" />
-              <SocialLink href="#" icon={<FaYoutube size={20} />} label="YouTube" className="hover:bg-[#FF0000] hover:border-[#FF0000]" />
-              <SocialLink href="#" icon={<FaFacebookF size={20} />} label="Facebook" className="hover:bg-[#1877F2] hover:border-[#1877F2]" />
+              <SocialLink href="https://api.whatsapp.com/send/?phone=6281311768254&text&type=phone_number&app_absent=0" icon={<FaWhatsapp size={20} />} label="WhatsApp" className="hover:bg-[#25D366] hover:border-[#25D366]" />
+              <SocialLink href="https://www.instagram.com/wakafdpf/" icon={<FaInstagram size={20} />} label="Instagram" className="hover:bg-[#E1306C] hover:border-[#E1306C]" />
+              <SocialLink href="https://www.tiktok.com/@dpf.or.id" icon={<FaTiktok size={20} />} label="TikTok" className="hover:bg-black hover:border-black" />
+              <SocialLink href="https://www.youtube.com/@dpfofficial" icon={<FaYoutube size={20} />} label="YouTube" className="hover:bg-[#FF0000] hover:border-[#FF0000]" />
+              <SocialLink href="https://www.facebook.com/people/Djalaluddin-Pane/pfbid02KhWqQs46MyzxQCsxTesXkzHQ4MTjBmf3QSEikFUsURbumLeG5A636hrPJAhNWrqRl/" icon={<FaFacebookF size={20} />} label="Facebook" className="hover:bg-[#1877F2] hover:border-[#1877F2]" />
             </div>
           </div>
 
@@ -44,34 +44,42 @@ export default function Footer() {
           <div className="lg:max-w-xs">
             <h3 className="text-white font-semibold mb-6">Program</h3>
             <ul className="space-y-4 text-sm text-white/90">
-              <li><FooterLink href="#">Investasi Kebaikan dengan Wakaf Peternakan</FooterLink></li>
-              <li><FooterLink href="#">Wakaf Masjid Plosok & Bencana Indonesia</FooterLink></li>
-              <li><FooterLink href="#">Wakaf Produktif Untuk UMKM Berdaya</FooterLink></li>
-              <li><FooterLink href="#">Wakaf Air Manfaat Mengalir, Pahala Tumbuh Subur</FooterLink></li>
-              <li><FooterLink href="#">Wakaf Uang</FooterLink></li>
+              <li><span className="block py-1">Investasi Kebaikan dengan Wakaf Peternakan</span></li>
+              <li><span className="block py-1">Wakaf Masjid Plosok & Bencana Indonesia</span></li>
+              <li><span className="block py-1">Wakaf Produktif Untuk UMKM Berdaya</span></li>
+              <li><span className="block py-1">Wakaf Air Manfaat Mengalir, Pahala Tumbuh Subur</span></li>
+              <li><span className="block py-1">Wakaf Uang</span></li>
             </ul>
           </div>
 
           {/* Contact Column */}
           <div className="lg:max-w-sm">
-            <h3 className="text-white font-semibold mb-6">Hubungi Kami</h3>
-            <ul className="space-y-4 text-sm text-white/90">
+            <h3 className="text-white font-bold mb-6 uppercase tracking-wider flex items-center gap-3">
+              <span className="w-1 h-6 bg-brand-green-500 block"></span>
+              Hubungi Kami
+            </h3>
+            <ul className="space-y-6 text-sm text-white/90">
               <li className="flex items-start gap-3">
-                <MapPin className="shrink-0 text-white mt-0.5" size={18} />
-                <span>Jl. Kebaikan No. 12, Jakarta Selatan, 12345</span>
+                <MapPin className="shrink-0 text-white mt-1" size={20} />
+                <div>
+                  <strong className="block text-white text-base mb-1">Jakarta:</strong>
+                  <a href="https://maps.app.goo.gl/VB1WisFeMboS12Ed7" target="_blank" rel="noopener noreferrer" className="leading-relaxed text-white/80 hover:text-brand-green-300 transition-colors block">
+                    Signature Park Grande, Jl. Letjen M.T. Haryono No.Kav. 20, RT.4/RW.1, 
+                    Cawang, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13630.
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="shrink-0 text-white" size={18} />
-                <span>+62 21 1234 5678</span>
+                <Phone className="shrink-0 text-white" size={20} />
+                <a href="https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF%2C%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" className="text-base hover:text-brand-green-300 transition-colors">0813-1176-8254 (DPF Official)</a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="shrink-0 text-white" size={18} />
-                <span>info@wakafdpf.id</span>
+                <Mail className="shrink-0 text-white" size={20} />
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=layanan@dpf.or.id" target="_blank" rel="noopener noreferrer" className="text-base hover:text-brand-green-300 transition-colors">layanan@dpf.or.id</a>
               </li>
             </ul>
-
-
           </div>
+
         </div>
       </Container>
 

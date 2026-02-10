@@ -25,11 +25,21 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  shiny?: boolean;
+}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+function Badge({ className, variant, shiny, children, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div
+      className={cn(badgeVariants({ variant }), "relative overflow-hidden", className)}
+      {...props}
+    >
+      {shiny && (
+        <div className="absolute inset-0 -translate-x-full animate-shine bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ width: '200%', backgroundSize: '50% 100%', backgroundRepeat: 'no-repeat' }} />
+      )}
+      {children}
+    </div>
   )
 }
 

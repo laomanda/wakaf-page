@@ -72,6 +72,15 @@ const config: Config = {
       boxShadow: {
         soft: "0 18px 45px rgba(15, 23, 42, 0.06)",
       },
+      keyframes: {
+        shine: {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-200% 0" },
+        },
+      },
+      animation: {
+        shine: "shine 8s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
