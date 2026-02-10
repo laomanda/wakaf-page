@@ -142,7 +142,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div 
         className={cn(
-          "fixed inset-0 z-[90] md:hidden transition-all duration-500",
+          "fixed inset-0 z-[9999] md:hidden transition-all duration-500",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         )}
       >
@@ -150,18 +150,11 @@ export default function Navbar() {
         
         <div 
           className={cn(
-            "absolute right-0 top-0 bottom-0 w-[300px] bg-white p-8 shadow-2xl transition-transform duration-500 ease-out flex flex-col font-['Poppins']",
+            "absolute right-0 top-0 bottom-0 w-[300px] bg-white p-6 shadow-2xl transition-transform duration-500 ease-out flex flex-col font-['Poppins']",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="mb-8 pt-4">
-             <h2 className="text-2xl font-bold text-neutral-900">Menu</h2>
-             <p className="text-sm text-neutral-500 mt-2">
-               Jelajahi program kebaikan.
-             </p>
-          </div>
-
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 mt-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -181,16 +174,6 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto space-y-4">
-             <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="p-3 bg-slate-50 rounded-2xl text-center">
-                    <Search className="w-5 h-5 mx-auto text-slate-400 mb-1" />
-                    <span className="text-[10px] font-bold text-slate-500 uppercase">Cari</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-2xl text-center">
-                    <HelpCircle className="w-5 h-5 mx-auto text-slate-400 mb-1" />
-                    <span className="text-[10px] font-bold text-slate-500 uppercase">Bantuan</span>
-                </div>
-             </div>
              <a
               href="https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF,%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut"
               target="_blank"

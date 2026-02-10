@@ -52,6 +52,7 @@ const config: Config = {
         body: ["var(--font-poppins)", "system-ui", "sans-serif"],
         accent: ["var(--font-poppins)", "system-ui", "sans-serif"],
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        script: ["var(--font-dancing-script)", "cursive"],
       },
       container: {
         center: true,
