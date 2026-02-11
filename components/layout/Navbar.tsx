@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  Search, 
+import {
+  Menu,
+  X,
+  ChevronRight,
+  Search,
   HelpCircle,
-  LayoutGrid,   
+  LayoutGrid,
   MessageSquareQuote,
-  MessageCircleQuestion, 
-  Phone 
+  MessageCircleQuestion,
+  Phone
 } from 'lucide-react';
 
 /**
@@ -36,22 +36,34 @@ const navItems = [
   { label: "FAQ", href: "#faq", icon: MessageCircleQuestion },
 ];
 
+import { usePathname } from 'next/navigation';
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Helper untuk menentukan href (jika di homepage pakai #id, jika di page lain pakai /#id)
+  const getHref = (href: string) => {
+    if (pathname === "/") return href;
+    return `/${href}`;
+  };
 
   // Smooth scroll handler
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
-      e.preventDefault();
-      const targetId = href.substring(1);
-      const el = document.getElementById(targetId);
-      if (el) {
-        const offset = 100;
-        const top = el.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+      if (pathname === '/') {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const el = document.getElementById(targetId);
+        if (el) {
+          const offset = 100;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        setIsOpen(false);
       }
-      setIsOpen(false);
+      // If not on homepage, let default behavior happen (navigate to /#id)
     }
   };
 
@@ -75,18 +87,18 @@ export default function Navbar() {
 
   return (
     <>
-      <header 
+      <header
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
           isScrolled ? "py-3" : "py-6"
         )}
       >
         <Container>
-          <nav 
+          <nav
             className={cn(
               "flex items-center justify-between px-4 sm:px-6 py-3 transition-all duration-500 border",
-              isScrolled 
-                ? "bg-white shadow-xl border-slate-200/50 rounded-2xl md:rounded-full" 
+              isScrolled
+                ? "bg-white shadow-xl border-slate-200/50 rounded-2xl md:rounded-full"
                 : "bg-white shadow-sm border-white/50 rounded-2xl md:rounded-full"
             )}
           >
@@ -118,7 +130,7 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <a
                   key={item.href}
-                  href={item.href}
+                  href={getHref(item.href)}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-600 rounded-full transition-all hover:bg-white hover:text-emerald-600 hover:shadow-sm"
                 >
@@ -156,15 +168,15 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div 
+      <div
         className={cn(
           "fixed inset-0 z-[9999] md:hidden transition-all duration-500",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         )}
       >
         <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
-        
-        <div 
+
+        <div
           className={cn(
             "absolute right-0 top-0 bottom-0 w-[300px] bg-white p-6 shadow-2xl transition-transform duration-500 ease-out flex flex-col font-['Poppins']",
             isOpen ? "translate-x-0" : "translate-x-full"
@@ -174,7 +186,7 @@ export default function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
                 className="flex items-center justify-between rounded-2xl border border-slate-100 px-5 py-4 text-sm font-semibold text-neutral-700 hover:bg-emerald-50 hover:border-emerald-100 hover:text-emerald-700 transition-all group"
                 onClick={(e) => handleNavClick(e, item.href)}
               >
@@ -190,7 +202,7 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto space-y-4">
-             <a
+            <a
               href="https://wa.me/6281311768254?text=Halo%20Wakaf%20DPF,%20saya%20ingin%20berwakaf%20dan%20ingin%20info%20lebih%20lanjut"
               target="_blank"
               rel="noopener noreferrer"
@@ -203,8 +215,8 @@ export default function Navbar() {
               Mulai Wakaf
             </a>
             <button
-               onClick={() => setIsOpen(false)}
-               className="w-full text-center text-xs font-semibold text-slate-400 py-2 hover:text-slate-600 transition-colors"
+              onClick={() => setIsOpen(false)}
+              className="w-full text-center text-xs font-semibold text-slate-400 py-2 hover:text-slate-600 transition-colors"
             >
               Tutup Menu
             </button>

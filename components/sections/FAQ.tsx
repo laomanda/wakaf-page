@@ -15,7 +15,7 @@ const faqData = [
         id: "item-1",
         question: "Apa itu Wakaf DPF?",
         answer:
-            "Wakaf DPF adalah program wakaf tunai yang dikelola oleh Dompet Dhuafa untuk membiayai program-program sosial, kemanusiaan, dan pemberdayaan masyarakat secara berkelanjutan. Dana wakaf dikelola secara produktif dan hasilnya disalurkan untuk maukuf alaih.",
+            '“Kami hadir untuk membuka akses pintu pemberdayaan bagi kaum fakir dan miskin.” Yayasan Wakaf Djalaluddin Pane (YWDP) merupakan lembaga penggalang dana masyarakat yang telah memiliki izin sebagai Lembaga Nazhir Wakaf tingkat nasional. YWDP menyelenggarakan berbagai program karitas, peningkatan produktivitas, pemberdayaan, serta program berkelanjutan yang berfokus pada peningkatan kesejahteraan kaum fakir dan miskin. YWDP resmi terdaftar dan berizin Badan Wakaf Indonesia (BWI) dengan nomor 3.3.00338.',
     },
     {
         id: "item-2",

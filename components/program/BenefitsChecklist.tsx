@@ -6,7 +6,7 @@ export default function BenefitsChecklist({
   benefits: string[];
 }) {
   return (
-    <div className="space-y-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+    <div className="space-y-4 rounded-[2.5rem] border border-neutral-200 bg-white p-6 shadow-sm">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
         Manfaat Program
       </p>

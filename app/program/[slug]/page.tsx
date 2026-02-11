@@ -23,7 +23,7 @@ export default async function ProgramDetailPage(props: ProgramDetailPageProps) {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900 pb-20 md:pb-0">
       <Navbar />
-      <main className="py-14 sm:py-16 lg:py-20">
+      <main className="py-28 sm:py-32 lg:py-36">
         <Container size="7xl">
           <div className="mb-8 space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
