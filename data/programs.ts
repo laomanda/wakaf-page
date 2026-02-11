@@ -10,7 +10,7 @@ export type Program = {
 
 export const programs: Program[] = [
   {
-    slug: "wakaf",
+    slug: "wakaf-uang",
     title: "Wakaf Melalui Uang",
     shortDesc: "Wakaf tunai yang dikelola secara produktif untuk menghasilkan manfaat berkelanjutan bagi umat.",
     images: [
@@ -29,13 +29,13 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-masjid-pelosok",
     title: "Wakaf Masjid Pelosok & Bencana Indonesia",
     shortDesc: "Pembangunan sarana ibadah, pendidikan, dan fasilitas umum berbasis wakaf.",
     images: [
+      "/brand/program/pembangunan/3.png",
       "/brand/program/pembangunan/1.png",
       "/brand/program/pembangunan/2.png",
-      "/brand/program/pembangunan/3.png",
     ],
     price: "Rp 50.000",
     description:
@@ -48,7 +48,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-peternakan",
     title: "Investasi Kebaikan Dengan Wakaf Peternakan",
     shortDesc: "Pengembangan peternakan produktif untuk pemberdayaan ekonomi masyarakat dhuafa.",
     images: [
@@ -67,7 +67,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-umkm",
     title: "Wakaf Produktif Untuk UMKM Berdaya",
     shortDesc: "Pemberdayaan usaha mikro kecil menengah melalui pendanaan dan pendampingan berbasis wakaf.",
     images: [
@@ -86,7 +86,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-speaker",
     title: "Wakaf Speaker QUR'AN Untuk Disabilitas & Turnatera & Hafidz QUR'AN",
     shortDesc: "Pengadaan speaker dan perangkat audio untuk mendukung kegiatan dakwah di masjid dan mushola.",
     images: [
@@ -105,7 +105,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-amal-jariyah",
     title: "Hadiah Abadi Untuk Orang Tua Tercinta",
     shortDesc: "Program wakaf umum untuk berbagai kebutuhan sosial dan kemanusiaan yang bersifat jariyah.",
     images: [
@@ -124,7 +124,7 @@ export const programs: Program[] = [
     ],
   },
   {
-    slug: "wakaf",
+    slug: "wakaf-air-bersih",
     title: "Wakaf Air Bersih & Sanitasi",
     shortDesc: "Penyediaan akses air bersih dan sanitasi layak untuk masyarakat desa terpencil.",
     images: [
