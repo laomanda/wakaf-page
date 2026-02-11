@@ -32,13 +32,28 @@ const Container = ({ children, className }: { children: React.ReactNode; classNa
 // Definisi menu dengan ikon
 const navItems = [
   { label: "Program", href: "#program", icon: LayoutGrid },
-  { label: "Testimoni", href: "#testimoni", icon: MessageSquareQuote },
+  { label: "Testimoni", href: "#testimonials", icon: MessageSquareQuote },
   { label: "FAQ", href: "#faq", icon: MessageCircleQuestion },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Smooth scroll handler
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const el = document.getElementById(targetId);
+      if (el) {
+        const offset = 100;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+      setIsOpen(false);
+    }
+  };
 
   // Deteksi scroll
   useEffect(() => {
@@ -104,6 +119,7 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-600 rounded-full transition-all hover:bg-white hover:text-emerald-600 hover:shadow-sm"
                 >
                   <item.icon className="w-4 h-4" />
@@ -160,7 +176,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className="flex items-center justify-between rounded-2xl border border-slate-100 px-5 py-4 text-sm font-semibold text-neutral-700 hover:bg-emerald-50 hover:border-emerald-100 hover:text-emerald-700 transition-all group"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-slate-50 rounded-lg group-hover:bg-emerald-200/50 transition-colors">

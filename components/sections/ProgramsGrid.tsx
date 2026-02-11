@@ -9,17 +9,19 @@ export default function ProgramsGrid() {
       <Container size="7xl">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            <span className="font-heading text-primary-500 font-bold tracking-[0.2em] text-sm uppercase block mb-3">
               Program Unggulan
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
-              Pilihan program wakaf dengan dampak nyata.
+            </span>
+            <h2 className="font-heading text-3xl font-bold leading-tight text-brand-green-900 sm:text-4xl lg:text-5xl">
+              Pilihan program wakaf dengan <span className="text-primary-500">dampak nyata.</span>
             </h2>
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
           {programs.map((program) => (
-            <ProgramCard key={program.slug} program={program} />
+            <div key={program.title} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+              <ProgramCard program={program} />
+            </div>
           ))}
         </div>
       </Container>

@@ -54,7 +54,7 @@ export default function ProgramCard({ program }: { program: Program }) {
         <div className="pt-2 mt-auto">
           <Link
             href={`/program/${program.slug}`}
-            className="inline-flex h-10 w-full items-center justify-center rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-primary-600 transition-colors hover:bg-brand-green-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+            className="inline-flex h-10 w-full items-center justify-center rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             Lihat Detail
             <ArrowUpRight className="ml-2 h-4 w-4" />
